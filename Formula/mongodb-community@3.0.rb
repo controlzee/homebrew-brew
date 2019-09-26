@@ -1,4 +1,4 @@
-class MongodbCommunityAT32 < Formula
+class MongodbCommunityAT30 < Formula
   desc "High-performance, schema-free, document-oriented database"
   homepage "https://www.mongodb.com/"
 
