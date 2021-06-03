@@ -93,7 +93,14 @@ class PythonAT2 < Formula
     end
 
     # Avoid linking to libgcc https://code.activestate.com/lists/python-dev/112195/
-    args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
+    ver_str = "#{MacOS.version}"
+    if ver_str.start_with?("11")
+      # SYSTEM_VERSION_COMPAT=1 didn't seem to work, but that's effectively what this does -- we'll need to deal with 12 etc down the line, hopefully we're free of python 2 by then...
+      ver_str = "10.16" 
+    end
+
+    # Avoid linking to libgcc https://code.activestate.com/lists/python-dev/112195/
+    args << "MACOSX_DEPLOYMENT_TARGET=#{ver_str}"
 
     # We want our readline and openssl! This is just to outsmart the detection code,
     # superenv handles that cc finds includes/libs!
