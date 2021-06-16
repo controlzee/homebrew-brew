@@ -1,13 +1,16 @@
 class MongodbCommunity < Formula
   desc "High-performance, schema-free, document-oriented database"
   homepage "https://www.mongodb.com/"
-  
-  url "https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-4.2.0.tgz"
-  sha256 "6aa2e0c348e8abeec7931dced1f85d4bb161ef209c6af317fe530ea11bbac8f0"
-  
+
   # frozen_string_literal: true
 
+  url "https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-4.4.5.tgz"
+  sha256 "4b38fd50170bddccf14cc4688ca59a44346b85cdcbc77113fcfb904b8f8c0882"
+
   bottle :unneeded
+
+  depends_on "mongodb-database-tools" => :recommended
+  depends_on "mongosh" => :recommended
 
   def install
     prefix.install Dir["*"]
@@ -61,12 +64,12 @@ class MongodbCommunity < Formula
       <key>HardResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
-        <integer>4096</integer>
+        <integer>64000</integer>
       </dict>
       <key>SoftResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
-        <integer>4096</integer>
+        <integer>64000</integer>
       </dict>
     </dict>
     </plist>

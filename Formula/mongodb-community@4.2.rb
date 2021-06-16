@@ -1,11 +1,11 @@
-class MongodbCommunityAT32 < Formula
+class MongodbCommunityAT42 < Formula
   desc "High-performance, schema-free, document-oriented database"
   homepage "https://www.mongodb.com/"
 
   # frozen_string_literal: true
 
-  url "https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.2.22.tgz"
-  sha256 "0f85d6e1810993cf3c02216a8b8abe20c0cde3d1fb6a9ac445ca26819f3cc2c9"
+  url "https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-4.2.12.tgz"
+  sha256 "06adf7b23ad3a3d97ae688d9001221c6cb263392ef74f3e265129b9b77b0a2e2"
 
   bottle :unneeded
 

@@ -4,8 +4,8 @@ class MongodbCommunityAT40 < Formula
 
   # frozen_string_literal: true
 
-  url "https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.12.tgz"
-  sha256 "36e838edb0604fa75e51393272a29202312c0ae7dd94e4000415a1aa5aec8464"
+  url "https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.22.tgz"
+  sha256 "0113f595a0128245871fd54c2e534f93cc7d320792a3fd8cd287a4c4c9d0871d"
 
   bottle :unneeded
 
@@ -63,12 +63,12 @@ class MongodbCommunityAT40 < Formula
       <key>HardResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
-        <integer>4096</integer>
+        <integer>64000</integer>
       </dict>
       <key>SoftResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
-        <integer>4096</integer>
+        <integer>64000</integer>
       </dict>
     </dict>
     </plist>
